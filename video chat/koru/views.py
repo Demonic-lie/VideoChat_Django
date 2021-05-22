@@ -5,3 +5,5 @@ from django.shortcuts import render
 def index(request):
     return render(request,"koru/index.html")
 
+def host(request):
+    return render(request,"koru/host.html")
