@@ -59,16 +59,34 @@ body {
   text-align: center;
 }
 
-/* Fake image, just for this example */
+
+
+
+
+/* buttons and clicks-links */
 .clickable {
   background-color: #4a3728;
-  color: white;
+  color: #fff;
   width: 50%;
   padding: 20px;
-  margin: 300px;
+  margin: 30px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
+
+
+/* input box for data*/
+.input_box {
+  background-color: #fffefc;
+  color: #000;
+  width: 50%;
+  padding: 20px;
+  margin: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+
 
 /* image */
 
