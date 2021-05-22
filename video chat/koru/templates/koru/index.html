@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href={% static 'koru/styles.css' %} rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <h2>Video Chat</h2>
+</div>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+</div>
+
+<!-- The flexible grid (content) -->
+<div class="row">
+    <div class="side">
+        <h2>About Me</h2>
+        <h5>Photo of me:</h5>
+        <div class="clickable" style="height:200px;">Image</div>
+        <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        <h3>More Text</h3>
+        <p>Lorem ipsum dolor sit ame.</p>
+        <div class="clickable" style="height:60px;">Image</div><br>
+        <div class="clickable" style="height:60px;">Image</div><br>
+        <div class="clickable" style="height:60px;">Image</div>
+    </div>
+    <div class="main">
+        <h2>LET'S GO.</h2>
+        <button class="clickable" style="height:60px;">Host chat</button>
+        <button class="clickable" style="height:60px;">Join chat</button>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <h2>Footer</h2>
+</div>
+
+</body>
+</html>
