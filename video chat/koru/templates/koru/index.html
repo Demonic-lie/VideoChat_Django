@@ -1,42 +1,8 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <title>koru</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{% static 'koru/styles.css' %}" rel="stylesheet">
-</head>
-<body>
+{% extends "koru/layout.html" %}
 
-<!-- Header -->
-<div class="header">
-    <h2>Video Chat</h2>
-</div>
-
-<!-- Navigation Bar -->
-<div class="navbar">
-    <a href="{% url 'koru:index' %}">home</a>
-</div>
-
-<!-- The flexible grid (content) -->
-<div class="row">
-    <div class="side">
-        <h2>About Me</h2>
-        <img src="{% static 'koru/pic1.jpg' %}" alt="sketch" style="height:250px;">
-    </div>
-    <div class="main">
+{% block pages %}
         <h2>LET'S GO.</h2>
         <button class="clickable" style="height:60px;">Host chat</button>
         <button class="clickable" style="height:60px;">Join chat</button>
+{% endblock %}
 
-    </div>
-</div>
-
-<!-- Footer -->
-<div class="footer">
-    <h2>Footer</h2>
-</div>
-
-</body>
-</html>

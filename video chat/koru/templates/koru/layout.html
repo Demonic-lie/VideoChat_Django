@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>koru</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'koru/styles.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <h2>Video Chat</h2>
+</div>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <a href="{% url 'koru:index' %}">home</a>
+</div>
+
+<!-- The flexible grid (content) -->
+<div class="row">
+    <div class="side">
+        <h2>About Me</h2>
+        <img src="{% static 'koru/pic1.jpg' %}" alt="sketch" style="height:250px;">
+    </div>
+    <div class="main">
+        {% block pages %}
+        {% endblock %}
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <h2>Footer</h2>
+</div>
+
+</body>
+</html>
