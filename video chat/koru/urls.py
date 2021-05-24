@@ -5,4 +5,5 @@ app_name= 'koru'
 urlpatterns = [
     path("", views.index, name="index"),
     path("host/", views.host, name="host"),
+    path("users/", views.users, name="users"),
 ]

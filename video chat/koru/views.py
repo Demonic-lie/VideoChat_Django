@@ -7,3 +7,6 @@ def index(request):
 
 def host(request):
     return render(request,"koru/host.html")
+
+def users(request):
+    return render(request,"koru/users.html")
