@@ -2,8 +2,9 @@
 
 {% block pages %}
     <h2>Host:</h2>
-    <form>
-        <input class="input_box" type="text" placeholder="Name" name="hostname">
+    <form action="{% url 'koru:host' %}" method="post">
+        {% csrf_token %}
+        <input class="input_box" type="text" placeholder="Name" name="name">
         <br><input class="input_box" type="text" placeholder="Meeting Name" name="uid">
         <br><button class="clickable" style="width:15%" type="submit">Start</button>
     </form>

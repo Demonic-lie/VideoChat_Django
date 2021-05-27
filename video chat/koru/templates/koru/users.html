@@ -1,10 +1,11 @@
 {% extends "koru/layout.html" %}
 
 {% block pages %}
-<h2>Peer:</h2>
-<form>
-    <input class="input_box" type="text" placeholder="Name" name="uid">
-    <input class="input_box" type="text" placeholder="Meeting Name" name="uid">
-    <br><button class="clickable" style="width:15%" type="submit">Join</button>
-</form>
+    <h2>Peer:</h2>
+    <form action="{% url 'koru:users' %}" method="post">
+        {% csrf_token %}
+        <input class="input_box" type="text" placeholder="Name" name="name">
+        <input class="input_box" type="text" placeholder="Meeting Name" name="uid">
+        <br><button class="clickable" style="width:15%" type="submit">Join</button>
+    </form>
 {% endblock %}
