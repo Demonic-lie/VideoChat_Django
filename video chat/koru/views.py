@@ -2,9 +2,13 @@ from django.shortcuts import render
 
 from .models import currentchat
 
-from django.http import HttpResponseRedirect
 
-from django.urls import reverse
+
+
+
+
+
+
 
 # Create your views here.
 
@@ -26,12 +30,12 @@ def host(request):
 def users(request):
     if request.method == "POST":
         if request.POST.get('name') and request.POST.get('uid'):
-            name = request.POST.get('name')
+            name = request.POST.get('name')    # user's name
             uid = request.POST.get('uid')
             chats = currentchat.objects.values_list("meetingname",flat=True)
             if uid in chats:
-                return render(request,"koru/host.html")
+                return render(request,"koru/host.html")     #edit
             else:
-                return render(request,"koru/index.html")
+                return render(request,"koru/nochat.html",{'uid' : uid})
     return render(request,"koru/users.html")
 

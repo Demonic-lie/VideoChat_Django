@@ -1,0 +1,7 @@
+{% extends "koru/layout.html" %}
+
+{% block pages %}
+<h1>Error 404!!!</h1><br>
+<h2>No Active Chat Found with Meeting Name: {{uid}}</h2><br>
+<a href="{% url 'koru:users' %}"><button class="clickable" style="height:60px;">Try different Meeting Name</button></a>
+{% endblock %}
