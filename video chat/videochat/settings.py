@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'koru',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -68,7 +69,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'videochat.wsgi.application'
+#WSGI_APPLICATION = 'videochat.wsgi.application'
+ASGI_APPLICATION = 'videochat.routing.application'
 
 
 # Database
