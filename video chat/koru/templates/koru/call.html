@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testing page</title>
+</head>
+<body>
+    <h1 id="app">{{ text }}</h1>
+    <script>
+        var socket = new WebSocket('ws://localhost:8000/ws/some_url/');
+
+        socket.onmessage = function(event){
+            var data = JSON.parse(event.data);
+            console.log(data);
+            document.querySelector('#app').innerText = data.message;
+            }
+    </script>
+</body>
+</html>

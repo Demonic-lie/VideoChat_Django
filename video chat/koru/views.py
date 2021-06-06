@@ -39,3 +39,7 @@ def users(request):
                 return render(request,"koru/nochat.html",{'uid' : uid})
     return render(request,"koru/users.html")
 
+
+def call(request):
+    return render(request, 'koru/call.html', context={'text': 'HeLLo'})
+

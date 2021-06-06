@@ -69,8 +69,8 @@ TEMPLATES = [
     },
 ]
 
-#WSGI_APPLICATION = 'videochat.wsgi.application'
-ASGI_APPLICATION = 'videochat.routing.application'
+WSGI_APPLICATION = 'videochat.wsgi.application'
+ASGI_APPLICATION = 'videochat.asgi.application'
 
 
 # Database
@@ -121,4 +121,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
