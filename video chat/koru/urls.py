@@ -5,6 +5,7 @@ app_name= 'koru'
 urlpatterns = [
     path("", views.index, name="index"),
     path("host/", views.host, name="host"),
+    path("hostcall/", views.hostcall, name="hostcall"),
     path("users/", views.users, name="users"),
-    path("call/", views.call, name="call"),
+    #path('<str:room_name>/', views.call, name='call'),
 ]

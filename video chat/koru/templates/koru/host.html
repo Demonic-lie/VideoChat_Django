@@ -2,7 +2,7 @@
 
 {% block pages %}
     <h2>Host:</h2>
-    <form action="{% url 'koru:host' %}" method="post">
+    <form action="{% url 'koru:hostcall' %}" method="post">
         {% csrf_token %}
         <input class="input_box" type="text" placeholder="Name" name="name">
         <br><input class="input_box" type="text" placeholder="Meeting Name" name="uid">

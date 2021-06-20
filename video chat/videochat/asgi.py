@@ -1,23 +1,17 @@
-"""
-ASGI config for videochat project.
-
-It exposes the ASGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/3.1/howto/deployment/asgi/
-"""
-
 import os
 
-from django.core.asgi import get_asgi_application
-
-from channels.routing import ProtocolTypeRouter, URLRouter
 from channels.auth import AuthMiddlewareStack
-from koru.routing import ws_urlpatterns
+from channels.routing import ProtocolTypeRouter, URLRouter
+from django.core.asgi import get_asgi_application
+import koru.routing
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'videochat.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
 
 application = ProtocolTypeRouter({
-    'http': get_asgi_application(),
-    'websocket': AuthMiddlewareStack(URLRouter(ws_urlpatterns))
+    "http": get_asgi_application(),
+    "websocket": AuthMiddlewareStack(
+        URLRouter(
+            koru.routing.websocket_urlpatterns
+        )
+    ),
 })
